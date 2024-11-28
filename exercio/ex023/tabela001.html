@@ -10,45 +10,64 @@
     
         }
         table {
-            width: 400px;
+            width: 500px;
+            position: relative;
             border-collapse: collapse;
         }
-        tr.linha {
-            background-color: blue;
-        }
-        td.dado {
-            background-color: aquamarine;
-        }
-        td {
+        td, th {
             border: 1px solid black;
-            padding: 8px;
+            padding: 10px;
         }
+         thead, tfoot {
+            background-color: gray;
+            color: white;
+         }
+         thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+         }
+         td.num  {
+            text-align: right;
+         }
+         tbody > tr:nth-child(odd){
+            background-color: lightgray;
+        
+         }
 
     </style>
 </head>
 <body>
     <h1> Minhas primeira tabela </h1>
     <table>
-     <tr class="linha"><!--primeira linha-->
-        <td>A1</td>
-        <td>B1</td>
-        <td>C1</td>
-     </tr>
-     <tr>
-        <td>A2</td>
-        <td class="dado">B2</td>
-        <td>C2</td>
-     </tr>
-     <tr>
-        <td>A3</td>
-        <td>B3</td>
-        <td>C3</td>
-     </tr>
-     <tr>
-        <td>A4</td>
-        <td>B4</td>
-        <td>C4</td>
-     </tr>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Populção</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td class="num">67 106 047</td>
+            </tr>
+        </tfoot>
+     
+     
      
     </table>
     
